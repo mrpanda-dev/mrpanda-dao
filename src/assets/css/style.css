@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  color: #000000;
+  background: #000000;
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: "PingFang SC";
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#app {
+  width: 100%;
+  height: calc(100vh - var(--vh-offset, 0px));
+  font-family: "PingFang SC";
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-overflow-scrolling: touch;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+}
+/* 1px边框问题 */
+.border {
+  border: 1px solid #000;
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    border-width: 0.5px;
+  }
+}
+/* 常用布局 */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 响应式图片 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 隐藏元素 */
+.hidden {
+  display: none;
+}
+
+/* 显示元素 */
+.visible {
+  display: block;
+}
